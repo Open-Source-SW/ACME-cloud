@@ -9,7 +9,7 @@ HERE = pathlib.Path(__file__).parent
 README = (HERE / 'tools/pypi/README.md').read_text()
 
 # Find directories that are modules and have __init__.py
-directories = [d for d,n,f in os.walk('acmecse') if '__init__.py' in f]
+directories = [d for d,n,f in os.walk('acme') if '__init__.py' in f]
 print(directories)
 
 setup(
@@ -29,7 +29,7 @@ setup(
 	description='An open source CSE Middleware for Education',
 	entry_points={
 		'console_scripts': [
-			'acmecse=acmecse.__main__:main',
+			'acmecse=acme.__main__:main',
 		]
 	},
 	include_package_data=True,
@@ -60,7 +60,7 @@ setup(
 	license='BSD',
 	long_description=README,
 	long_description_content_type='text/markdown',
-	packages = directories,
+	packages = find_packages(include=['acme', 'acme.*']),
 	#package_dir={'acmecse': 'acmecse'},
 	url='https://acmecse.net',
 )

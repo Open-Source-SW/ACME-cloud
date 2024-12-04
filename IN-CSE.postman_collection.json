@@ -1,0 +1,303 @@
+{
+	"info": {
+		"_postman_id": "a877ae60-75d1-481f-886b-7082936c2952",
+		"name": "IN-CSE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39470066"
+	},
+	"item": [
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-M2M-Origin",
+						"value": "CAdmin",
+						"type": "text"
+					},
+					{
+						"key": "X-M2M-RI",
+						"value": "kde8wty41f",
+						"type": "text"
+					},
+					{
+						"key": "X-M2M-RVI",
+						"value": "3",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/CAdmin",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"CAdmin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE_AE",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-M2M-Origin",
+						"value": "CAdmin",
+						"type": "text"
+					},
+					{
+						"key": "X-M2M-RI",
+						"value": "kde8wty41f",
+						"type": "text"
+					},
+					{
+						"key": "X-M2M-RVI",
+						"value": "3",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;ty=2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"m2m:ae\": {\n        \"rn\": \"NoiseCancellationSystem\",\n        \"api\": \"NCSApp\",\n        \"rr\": true,   \n        \"srv\": [\n            \"3\"\n        ],\n        \"lbl\": [\"type:device\"]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/cse-in",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"cse-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE_CNT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json;ty=3",
+						"type": "text"
+					},
+					{
+						"key": "X-M2M-RI",
+						"value": "1tpigvyw7k",
+						"type": "text"
+					},
+					{
+						"key": "X-M2M-RVI",
+						"value": "3",
+						"type": "text"
+					},
+					{
+						"key": "X-M2M-Origin",
+						"value": "CAdmin",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"m2m:cnt\": {\n        \"mbs\": 10000,\n        \"mni\": 10,\n        \"rn\": \"Schedule\"\n    }\n}\n\n// {\n//     \"m2m:cnt\": {\n//         \"mbs\": 10000,\n//         \"mni\": 10,\n//         \"rn\": \"ExecutionState\"\n//     }\n// }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/cse-in/NoiseCancellationSystem",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"cse-in",
+						"NoiseCancellationSystem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE_CIN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json;ty=4",
+						"type": "text"
+					},
+					{
+						"key": "X-M2M-Origin",
+						"value": "CAdmin",
+						"type": "text"
+					},
+					{
+						"key": "X-M2M-RVI",
+						"value": "3",
+						"type": "text"
+					},
+					{
+						"key": "X-M2M-RI",
+						"value": "sc9t989846",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n    \"m2m:cin\": {\n        \"cnf\": \"text/plain:0\",\n        \"rn\": \"Schedule\",\n        \"con\": \"2024-12-04T18:00:00\"\n    }\n}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/cse-in/NoiseCancellationSystem/Schedule",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"cse-in",
+						"NoiseCancellationSystem",
+						"Schedule"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SUBSCRIBE-1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-M2M-Origin",
+						"value": "CAdmin",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;ty=23",
+						"type": "text"
+					},
+					{
+						"key": "X-M2M-RI",
+						"value": "dv2vx86oqb6",
+						"type": "text"
+					},
+					{
+						"key": "X-M2M-RVI",
+						"value": "3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"m2m:sub\": {\n        \"enc\": {\n            \"net\": [\n                3\n            ]\n        },\n        \"nu\": [\n            \"http://127.0.0.1:3000/callback\"\n        ],\n        \"rn\": \"callback\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "SUBSCRIBE",
+					"host": [
+						"SUBSCRIBE"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SUBSCRIBE-2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-M2M-Origin",
+						"value": "CAdmin",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;ty=23",
+						"type": "text"
+					},
+					{
+						"key": "X-M2M-RI",
+						"value": "dv2vx86oqb6",
+						"type": "text"
+					},
+					{
+						"key": "X-M2M-RVI",
+						"value": "3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"m2m:sub\": {\n        \"enc\": {\n            \"net\": [\n                3\n            ]\n        },\n        \"nu\": [\n            \"http://127.0.0.1:3000/callback\"\n        ],\n        \"rn\": \"callback\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "SUBSCRIBE",
+					"host": [
+						"SUBSCRIBE"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
