@@ -4,7 +4,7 @@
 
 ```
 pip install -r requirements.txt
-python3 setup.py install
+pip install acmecse
 ```
 
 2. Run acmecse using `acme.ini` in this folder.
