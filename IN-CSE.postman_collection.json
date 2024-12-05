@@ -298,6 +298,48 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "RETRIEVE",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-M2M-Origin",
+						"value": "CAdmin",
+						"type": "text"
+					},
+					{
+						"key": "X-M2M-RI",
+						"value": "7hyyru94gma",
+						"type": "text"
+					},
+					{
+						"key": "Co",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/~/cse-in/NoiseCancellationSystem/NoiseAverage/latest",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"~",
+						"cse-in",
+						"NoiseCancellationSystem",
+						"NoiseAverage",
+						"latest"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
